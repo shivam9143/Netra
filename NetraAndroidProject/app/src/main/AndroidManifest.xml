@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shivam.pt.barcodescanner">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/barcode_icon_2_png"
+        android:label="Netra"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name="com.shivam.pt.barcodescanner.activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.shivam.pt.barcodescanner.activity.MainActivity" />
+        <activity
+            android:name="com.shivam.pt.barcodescanner.activity.WebViewActivity"
+            android:label="Barcode Search"
+            android:theme="@style/WebActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shivam.pt.barcodescanner.activity.MainActivity" />
+        </activity>
+        <!-- For Fabric Crash Analytics -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="999b54da9d566381250dc5e5d613f3d8e44a356a" />
+
+        <activity android:name="com.shivam.pt.barcodescanner.activity.Productdetails"></activity>
+        <activity android:name="com.shivam.pt.barcodescanner.activity.SearchResults"></activity>
+    </application>
+
+</manifest>
